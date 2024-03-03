@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cv Axel Correa</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Lobster&display=swap" rel="stylesheet">
+    <!-- Estilos -->
+    <style>
+body {
+    margin: 0;
+    background-color: #09f;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    position: relative;
+    min-height: 100vh; /* Esto garantiza que el cuerpo tenga al menos el alto de la pantalla */
+    overflow-x: hidden; /* Evita la barra de desplazamiento horizontal */
+}
+
+        nav {
+            position: fixed;
+            top: 0px;
+            width: 100%;
+            height: 80px;
+            background: linear-gradient(to right, #0d4d72, #2a86ba); /* Gradiente azul */
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+            z-index: 3;
+        }
+
+        ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        align-items: center;
+        height: 100%;
+        flex-direction: row;
+        justify-content: flex-end;
+    }
+
+        li {
+        margin-right: 50px;
+    }
+
+        a {
+        text-decoration: none;
+        color: #fff;
+        display: flex;
+        font-size: 15px;
+        font-family: "DM Serif Display";
+        position: relative;
+       /* padding: 10px 15px;  */
+       margin-right: 20px;
+       right: 40px;
+    }
+        
+        a::after {
+            content: '';
+            position: absolute;
+            bottom: -2px; /* Ajusta la posición del subrayado */
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: #DAFDBA; /* Color del subrayado */
+            transition: width 0.3s ease; /* Transición suave */
+        }
+        a:hover::after {
+            width: 80%; /* Cambia el ancho del subrayado */
+        }
+
+        a:hover {
+            color: #DAFDBA;
+        }
+        @media screen and (max-width: 600px) {
+        nav {
+            height: auto; /* Altura automática para ajustarse al contenido */
+            justify-content: center; /* Alinea horizontalmente las opciones del menú */
+        }
+
+        ul {
+            flex-direction: row; /* Mantiene la dirección de las opciones en horizontal */
+            align-items: center; /* Alinea las opciones al centro */
+            height: auto; /* Altura automática para ajustarse al contenido */
+        }
+
+        li {
+            margin: 0 10px; /* Ajusta el margen entre las opciones */
+            font-size: 12px; /* Reducir el tamaño de fuente */
+        }
+    }
+    @media screen and (max-width: 600px) {
+    nav {
+        height: auto; /* Altura automática para ajustarse al contenido */
+        justify-content: center; /* Centra horizontalmente las opciones del menú */
+    }
+
+    ul {
+        flex-direction: row; /* Cambia la dirección de las opciones a columna */
+        align-items: center; /* Alinea las opciones al centro */
+        height: auto; /* Altura automática para ajustarse al contenido */
+    }
+
+    li {
+        margin: 10px 0; /* Ajusta el margen entre las opciones */
+        font-size: 15px; /* Restablece el tamaño de fuente */
+    }
+
+    /* Ocultar la opción de Contactame */
+    li:last-child {
+        display: none;
+    }
+}
+        .presentacion{
+            position: absolute;
+            color: #fff;
+            top: 50%;
+            left: 20%;
+            font-size: 20px;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            transform: translate(-50%, -50%);
+            display: flex;
+            flex-direction: column;
+            text-align: flex-start;
+            z-index: 2;
+            font-family: "DM Serif Display";
+
+        }
+        @media screen and (max-width: 600px) {
+    .presentacion {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+    }
+}
+@media screen and (max-width: 600px) {
+    #Contactame {
+        position: absolute;
+        bottom: 50px; /* Ajusta esta cantidad según sea necesario */
+        left: 50%; /* Centra horizontalmente el botón */
+        transform: translateX(-50%);
+    }
+}
+        .presentacion h3, .presentacion h1{
+            margin: 5px 0;
+        }
+        .video-cv {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh; /* 100% de la altura del viewport */
+    object-fit: cover;
+    z-index: -1; /* Cambiado a -1 para asegurar que el contenido se muestre por encima */
+}
+        #Full-Stack{
+            color: #DAFDBA;
+            display: inline-block; /* Para que cada letra aparezca en una línea */
+        }
+        
+        #Axel{
+            font-size: 65px;
+            font-family: "DM Serif Display";
+        }
+        #Contactame{
+            height: 45px;
+            width:150px;
+            border-radius: 20px;
+            background-color: #DAFDBA;
+            margin-top: 10px;
+            color: #000;
+            font-family: "time new roman ", serif;
+            font-size: 18px;
+            border: 0;
+            font-weight: 700;   
+            top: 110%; /* Cambia esta propiedad para ajustar la posición del botón */
+        }
+        /* Animación para simular el efecto de escribir */
+        @keyframes typing {
+            from { width: 0; }
+        }
+        .cursor {
+            display: inline-block;
+            width: 1px;
+            height: 18px;
+            margin-left: 3px;
+            background-color: #DAFDBA;
+            animation: typing 1s steps(20) infinite;
+        }
+        .container {
+    min-height: 100%; /* Establecer el mínimo de la altura del contenedor */
+    height: auto; /* Ajustar la altura automáticamente */
+}
+@media screen and (max-width: 400px) {
+    body {
+        margin-bottom: 0; /* Asegura que no haya margen en la parte inferior del cuerpo */
+    }
+}
+        .QuienSoy {
+            background-color: rgba(255, 255, 255, 0.5);
+            backdrop-filter: blur(10px);
+            color: #DAFDBA;
+            width: 800px;
+            height: 400px;
+            position: absolute;
+            top: 140%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            z-index: 2;
+            opacity: 1.0;
+        }
+        #QuienSoy2{
+            text-decoration: underline;
+            text-underline-offset: 0.3em;
+        }
+        .messi{
+            width: 200px;
+            height: 200px;
+            position: relative;
+            top: 30px;
+            right: 250px;
+        }
+        #parrafo_quiensoy{
+            position: relative;
+            left: 130px;
+            bottom: 140px;
+            color: #fff;
+        }
+        /* Estilos para pantallas menores a 600px */
+@media screen and (max-width: 600px) {
+    .QuienSoy {
+        width: 80%; /* Cambia el ancho a 80% */
+        height: auto; /* Altura automática para ajustarse al contenido */
+        top: calc(50vh + 720px); /* Ajusta la distancia según sea necesario */
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .messi {
+        width: 150px; /* Reducir el tamaño de la imagen */
+        height: 150px;
+        top: 0;
+        right: 0; /* Alinear a la derecha */
+        left: auto;
+    }
+
+    #parrafo_quiensoy {
+        position: static; /* Restablecer posición */
+        text-align: center; /* Alinear texto al centro */
+        margin-top: 0px; /* Agregar un espacio superior */
+        left: 0; /* Alinear a la izquierda */
+        bottom: 0;
+    }
+}
+.Habilidades {
+    position: absolute;
+    top: calc(40vh + 10px); /* Ajusta la distancia según sea necesario */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    text-align: center;
+    margin-top: 1300px;
+    z-index: 2; /* Asegura que "Mis habilidades" esté sobre el video */
+    gap: 40px;
+    margin-bottom: 200px; /* Agrega un margen inferior */
+}
+#Habilidades2 {
+    grid-column: 1 / -1;
+}
+@media screen and (max-width: 600px) {
+    .Habilidades {
+        position: absolute;
+        top: calc(50vh + 00px); /* Ajusta la distancia según sea necesario */
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* Cambiar a 2 columnas en dispositivos más pequeños */
+        gap: 10px;
+        text-align: center;
+        z-index: 2; /* Asegura que "Mis habilidades" esté sobre el video */
+        gap: 40px;
+    }
+}
+
+        img{
+            width: 70px;
+        }
+     
+        footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    position: fixed; /* Fijar el footer */
+    bottom: 0;
+    width: 100%;
+    height: 4;
+    z-index: 2;
+}
+
+    </style>
+</head>
+<header>
+    <div class="container">
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#QuienSoy">Quien soy</a></li>
+                <li><a href="#Habilidades">Habilidades</a></li>
+                <li><a href="#idiomas">Contactame</a></li>
+            </ul>
+        </nav>
+        
+    </header>
+    <body>
+        <div class="fondo">
+            <video class="video-cv" autoplay muted loop>
+                <source src="146562 (Original).mp4" type="video/mp4"> 
+                tu navegador no soporta el video
+            </video>
+        </div>
+        <div class="presentacion">
+            <div class="presentacion-content">
+                <h3 id="hola">ANA POR FAVOR</h3>
+                <h1 id="Axel"><strong>DAME BOLA</strong></h1>
+                <h3 id="Ysoy">soy <span id="Full-Stack"></span><span class="cursor"></span></h3>
+            </div>
+            <button id="Contactame"><strong>Descarga mi cv</strong></button>
+        </div>
+    </div>
+    <div class="QuienSoy" id="QuienSoy">
+        <h1 id="QuienSoy2">Quien Soy</h1>
+        <img class="messi" src="WhatsApp_Image_2024-02-23_at_22.11.52-removebg-preview.png" alt="">
+        <p id="parrafo_quiensoy"> Me apasiona la programación y todo lo relacionado con la tecnología. <br> Siempre estoy buscando nuevas oportunidades para aprender y expandir <br>mis habilidades. Estoy constantemente abierto a nuevos desafíos y cambios, <br>ya que creo que son oportunidades para crecer y mejorar. ¡Estoy emocionado <br>por lo que el futuro tiene reservado y listo para enfrentar cualquier desafío que <br>se presente en el camino! </p>
+    </div>
+    <div class="container">
+        <div class="Habilidades" id="Habilidades">
+            <h1 id="Habilidades2">Mis Habilidades</h1>
+            <img id="python" src="brand-python (1).png" alt="">
+            <img id="csharp" src="brand-c-sharp (3).png" alt="">
+            <img id="sql"  src="sql (1).png" alt="">
+            <img id="html" src="brand-html5 (1).png" alt="">
+            <img id="css" src="brand-css3 (1).png" alt="">
+            <img id="javascript" src="brand-javascript (1).png" alt="">
+            <img id="github" src="brand-github (1).png" alt="">
+            <img id="git" src="brand-git (1).png" alt="">
+        </div>
+    </div>
+    
+
+    <script>
+        // Función para mostrar la palabra "Full-Stack" letra por letra
+        const fullStack = document.getElementById('Full-Stack');
+        const cursor = document.querySelector('.cursor');
+        const word = "EL AMOR DE TU VIDA";
+        let index = 0;
+
+        function showNextLetter() {
+            if (index < word.length) {
+                fullStack.textContent += word[index];
+                index++;
+                setTimeout(showNextLetter, 200); // Velocidad de aparición de cada letra (en milisegundos)
+            } else {
+                cursor.style.display = ''; // Oculta el cursor al finalizar la escritura
+            }
+        }
+
+        // Iniciar la función al cargar la página
+        showNextLetter();
+
+        // Evento de clic en el botón Descarga mi cv
+        // Evento de clic en el botón Contactame
+document.getElementById('Contactame').addEventListener('click', function() {
+    // URL del archivo a descargar
+    const archivoURL = 'Cv Axel Correa (3).pdf';
+    
+    // Crear un enlace <a> para la descarga del archivo
+    const enlaceDescarga = document.createElement('a');
+    enlaceDescarga.href = archivoURL;
+    enlaceDescarga.setAttribute('download', ''); // Establecer el atributo 'download' para forzar la descarga
+    enlaceDescarga.style.display = 'none'; // Ocultar el enlace
+    
+    // Agregar el enlace al documento
+    document.body.appendChild(enlaceDescarga);
+    
+    // Simular un clic en el enlace para iniciar la descarga
+    enlaceDescarga.click();
+    
+    // Eliminar el enlace del documento
+    document.body.removeChild(enlaceDescarga);
+});
+    </script>
+</body>
+
+</html>
